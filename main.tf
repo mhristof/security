@@ -1,8 +1,8 @@
 resource "aws_security_group" "mysg" {
-	
-	name = "yellow-sec-group"
-	description = "Yellow team security group"  
-	ingress{ 
+
+	name = "yellow-sec-group.${random_id.myrandom.hex}"
+	description = "Yellow team security group"
+	ingress{
 	  from_port = var.from_port
 	  to_port = var.to_port
 	  protocol = "tcp"
